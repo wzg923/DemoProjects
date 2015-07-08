@@ -1,0 +1,5 @@
+cd /home/weblogic/Oracle/Middleware/user_projects/domains/base_domain/bin
+. ./setDomainEnv.sh
+java weblogic.Deployer -adminurl t3://localhost:7001 -user weblogic -password zaq12wsx -deploy -name gems -source /home/weblogic/webapp/gems.2013.07.02.war -targets S107-1,S107-2,S108-1,S108-2,S109-1,S109-2,S110-1,S110-2 -stage -appversion 2013.07.02
+
+java weblogic.Deployer -adminurl t3://localhost:7001 -user weblogic -password zaq12wsx -redeploy -name gems -source /home/weblogic/webapp/gems-web.war -appversion 2015.1.4
