@@ -10,7 +10,7 @@ set node [lindex $argv 3]
 spawn ssh -l $name $host
 expect {
  "password:"
- {send "Neusoft@2015\r"}
+ {send "$password\r"}
  "(yes/no)?"
  {send "yes\r";exp_continue;}
 }
